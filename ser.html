@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>管理员</title>
+		<link rel="stylesheet" type="text/css" href="css/ser.css" />
+		<script src="js/import/echarts.min.js"></script>
+		<script type="text/javascript" src="js/import/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/import/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/myJS/alertinput.js"></script>
+		<script type="text/javascript" src="js/myJS/checkboxval.js"></script>
+		<script type="text/javascript" src="js/myJS/addinput.js"></script>
+	</head>
+
+	<body>
+		<!--主体div开始-->
+		<div id="main">
+			<!--用户会话数量div开始-->
+			<div id="number" >
+				<!--图标及标题-->
+				<div id="number-icon-title">
+					<img class="img-icon" src="img/u9.svg" />
+					<p class="title-text">用户会话数量</p>
+				</div>
+				<!--柱状图-->
+				<div id="zzt">
+					<!--引入的js-->
+				</div>
+				<!--用户会话数量div结束-->
+			</div>
+
+			<!--会话概况div开始-->
+			<div id="survey">
+				<!--图标及标题-->
+				<div id="survey-icon-title">
+					<img class="img-icon" src="img/u39.svg" />
+					<p class="title-text">会话概况</p>
+				</div>
+				<!--当前选择提示-->
+				<div id="current" onclick="current()">
+					<div id="current-text">
+						<p style="color: rgba(22, 155, 213, 1);">
+							<span>您当前选择的是：<span>会话123456</span>——<span>用户5</span></span>
+						</p>
+					</div>
+				</div>
+				<!--分页显示-->
+				<div id="page">
+					<ul id="all" style="list-style-type: none;">
+					</ul>
+					<div id="changepage">
+					</div>
+				</div>
+				<!--五个按钮-->
+				<div id="btn-5">
+					<div id="open-btn" class="btns"">
+						<div id="open-btn-text" class="btns_text">
+							<p><span>开启会话</span></p>
+						</div>
+					</div>
+					<div id=  "close-btn" class="btns" style="top: 40px; background-color: #f44336;">
+						<div id="close-btn-text" class="btns_text" >
+							<p><span>关闭会话</span></p>
+						</div>
+					</div>
+					<div id="delete-btn" class="btns" style="top: 80px; background-color: #455a64;">
+						<div id="delete-btn-text" class="btns_text">
+							<p><span>查看会话</span></p>
+						</div>
+					</div>
+					<div id="connect-btn" class="btns" style="top: 120px; background-color: #169bd5;">
+						<div id="connect-btn-text" class="btns_text">
+							<p><span>连接会话</span></p>
+						</div>
+					</div>
+					<div id="delete-btn" class="btns" style="top: 160px; background-color: rgba(170, 170, 170, 1);">
+						<div id="delete-btn-text" class="btns_text">
+							<p><span>删除会话</span></p>
+						</div>
+					</div>
+				</div>
+			
+				<!--会话概况div结束-->
+			</div>
+
+			<!--下半部分div开始-->
+			<div id= "down" >
+				<!--图标及标题-->
+				<div id="manage-icon-title" >
+					
+						<img  src="img/u11.svg" id="manage-icon"/>
+					
+					<span id="manage-title">会话管理</span>
+				</div>
+			<!--所有输入框-->	
+			<div id="inputs">
+				
+			
+				<!--左侧-->
+				<div id="manage-left" >
+					<!--开启会话-->
+					<div id="manage-session-open" >
+						<div id="manage-session-open-left" class="input-title-div" style=" height: 28px; width: 84px; float: left;padding-left: 1px;">
+							<span class="manage-text" style="padding-left: 12px;" >开启会话</span>
+						</div>
+
+						<div id="manage-session-open-mid" class="input-textbox-div" style=" height: 40px;" >
+
+						<div id="manage-session-open-input" style="display: inline-block;" >
+							<input type="text" id="manage-session-open-textbox"  placeholder="请输入会话序号" class="input-textbox" />
+
+						</div>
+							<img id="manage-session-open-add-img" src="img/u37.svg" style="display: inline-block;" class="addipt" onclick="openadd()"/>
+						</div>
+						<div id= "manage-session-open-right" class="input-btn-div" >
+							
+							<div id="manage-session-open-btn" class="ensure">
+								<div id="manage-session-open-btn_text" class="ensure_text" onclick="openbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--关闭会话-->
+					<div id="manage-session-close" style=" padding-top: 10px; " >
+						<div id="manage-session-close-left" class="input-title-div" style="height: 28px; width: 84px; float: left;padding-left: 1px;">
+							<span class="manage-text" style="padding-left: 12px;">关闭会话</span>
+						</div>
+
+						<div id="manage-session-close-mid" class="input-textbox-div" style=" height: 40px;">
+
+						<div id="manage-session-close-input" style="display: inline-block;" >
+							<input type="text" id="manage-session-close-textbox" placeholder="请输入会话序号" class="input-textbox"  />
+						</div>
+							<img id="manage-session-close-add-img"  src="img/u37.svg" class="addipt" onclick="closeadd()"/>
+						</div>
+						<div id= "manage-session-close-right" class="input-btn-div" >
+							
+							<div id="manage-session-close-btn" class="ensure">
+								<div id="manage-session-close-btn_text" class="ensure_text" onclick="closebtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--创建会话-->
+					<div id="manage-session-create" >
+						<div id="manage-session-create-left" class="input-title-div">
+							<p class="manage-text">创建会话</p>
+						</div>
+
+						<div id="manage-session-create-mid" class="input-textbox-div" >
+
+						
+							<input type="text" id="manage-session-create-textbox" placeholder="请输入会话用户名" class="input-textbox" style="width: 133px;" />
+							<input type="text" id="manage-session-create-textbox2" placeholder="请输入会话序号" class="input-textbox" style="width: 133px;" />
+						</div>
+						<div id= "manage-session-create-right" class="input-btn-div" >
+							
+							<div id="manage-session-create-btn" class="ensure">
+								<div id="manage-session-create-btn_text" class="ensure_text" onclick="createbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--会话密码-->
+					<div id="manage-session-setpassword" style="height: 70px;">
+						<div id="manage-session-setpassword-left" class="input-title-div" style="position: relative;bottom: 15px;">
+							<p class="manage-text" style="height: 10px;">会话密码</p>
+						</div>
+
+						<div id="manage-session-setpassword-mid" class="input-textbox-div" style="position: relative;top: 10px;" >
+
+						
+							<input type="text" id="manage-session-setpassword-textbox" placeholder="请输入所属用户" class="input-textbox" style="width: 133px;" />
+							<input type="text" id="manage-session-setpassword-textbox2" placeholder="请输入指定密码" class="input-textbox" style="width: 133px;" /><br />
+							<input type="radio" name="radio-pass" value="random" style="position: relative;top: 5px;"/>
+								<label for="random-pass" class="radiotext" style="position: relative;top: 5px;">随机生成</label>
+								<input type="radio" name="radio-pass" value="appoint" checked="checked" style="position: relative;top: 5px; left: 50px;"/>
+								<label for="appoint-pass" class="radiotext" style="position: relative;top: 5px;left: 50px;">指定密码</label>
+						</div>
+						<div id= "manage-session-setpassword-right" class="input-btn-div" style="position: relative;bottom: 15px;">
+							
+							<div id="manage-session-setpassword-btn" class="ensure">
+								<div id="manage-session-setpassword-btn_text" class="ensure_text" onclick="setpasswordbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--连接会话-->
+					<div id="manage-session-connect" >
+						<div id="manage-session-connect-left" class="input-title-div">
+							<p class="manage-text">连接会话</p>
+						</div>
+
+						<div id="manage-session-connect-mid" class="input-textbox-div" >
+
+						
+							<input type="text" id="manage-session-connect-textbox" placeholder="请输入用户名" class="input-textbox" style="width: 133px;" />
+							<input type="text" id="manage-session-connect-textbox2" placeholder="请输入会话序号" class="input-textbox" style="width: 133px;" />
+						</div>
+						<div id= "manage-session-connect-right" class="input-btn-div" >
+							
+							<div id="manage-session-connect-btn" class="ensure">
+								<div id="manage-session-connect-btn_text" class="ensure_text" onclick="connectbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!--删除会话-->
+					<div id="manage-session-delete" >
+						<div id="manage-session-delete-left" class="input-title-div">
+							<p class="manage-text">删除会话</p>
+						</div>
+
+						<div id="manage-session-delete-mid" class="input-textbox-div" >
+
+						
+							<input type="text" id="manage-session-delete-textbox" placeholder="请输入会话序号" class="input-textbox"  />
+							
+						</div>
+						<div id= "manage-session-delete-right" class="input-btn-div" >
+							
+							<div id="manage-session-delete-btn" class="ensure">
+								<div id="manage-session-delete-btn_text" class="ensure_text" onclick="deletebtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div id= "manage-right">
+					<!--查看密码-->
+					<div id="manage-session-catpassword" >
+						<div id="manage-session-catpassword-left"class="input-title-div">
+							<p class="manage-text">查看密码</p>
+						</div>
+
+						<div id="manage-session-catpassword-mid"  class="input-textbox-div">
+
+						
+							<input type="text" id="manage-session-catpassword-textbox" placeholder="请输入会话序号" class="input-textbox"  />
+							
+						</div>
+						
+					</div>
+					<!--用户会话-->
+					<div id="manage-session-list" >
+						<div id="manage-session-list-left" class="input-title-div">
+							<p class="manage-text">用户会话</p>
+						</div>
+
+						<div id="manage-session-list-mid" class="input-textbox-div">
+
+						
+							<input type="text" id="manage-session-list-textbox" placeholder="请输入会话序号" class="input-textbox"  />
+							
+						</div>
+						
+					</div>
+					<!--会话信息-->
+					<div id="manage-session-message" style=" padding-top: 10px; ">
+						<div id="manage-session-message-left" class="input-title-div" style="height: 28px; width: 84px; float: left;padding-left: 1px;">
+							<span class="manage-text" style="padding-left: 12px;">会话信息</span>
+						</div>
+
+						<div id="manage-session-message-mid" class="input-textbox-div" style=" height: 40px;">
+
+						<div id="manage-session-message-input" style="display: inline-block;" >
+							<input type="text" id="manage-session-message-textbox" placeholder="请输入会话序号" class="input-textbox" />
+						</div>
+							<img id="manage-session-message-add-img" style="display: inline-block;" src="img/u37.svg" class="addipt" onclick="messageadd()"/>
+						</div>
+						<div id= "manage-session-message-right" class="input-btn-div">
+							
+							<div id="manage-session-message-btn" class="ensure">
+								<div id="manage-session-message-btn_text" class="ensure_text" onclick="messagebtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				</div>
+				<!--下半部分div结束-->
+			</div>
+
+			<!--主体div结束-->
+		</div>
+	</body>
+	<script src="js/myJS/zzt.js"></script>
+	<script type="text/javascript" src="js/myJS/sergetdata-page.js"></script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>普通用户</title>
+		<link rel="stylesheet" type="text/css" href="css/cli.css" />
+		<script src="js/import/echarts.min.js"></script>
+		<script type="text/javascript" src="js/import/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/import/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/myJS/alertinput.js"></script>
+		<script type="text/javascript" src="js/myJS/select.js"></script>
+	</head>
+
+	<body>
+		<!--主体div开始-->
+		<div id="main">
+			<!--用户会话信息div开始-->
+			<div id="number">
+				<!--图标及标题-->
+				<div id="number-icon-title">
+					<img class="img-icon" src="img/u9.svg" />
+					<p class="title-text">用户会话信息</p>
+				</div>
+				<!--分页-->
+				<div id="page" style="left: 70px; width: 650px; background-color: salmon;">
+					<ul id="all" style="list-style-type: none;">
+					</ul>
+
+				</div>
+				<div id="btn-4" style="left:700px;  ">
+					<div id="open-btn" class="btns" style="top: 20px;">
+						<div id="open-btn-text" class="btns_text">
+							<p><span>开启会话</span></p>
+						</div>
+					</div>
+					<div id="close-btn" class="btns" style="top: 60px; background-color: #f44336;">
+						<div id="close-btn-text" class="btns_text" >
+							<p><span>关闭会话</span></p>
+						</div>
+					</div>
+					<div id="connect-btn" class="btns" style="top: 100px; background-color: #169bd5;">
+						<div id="connect-btn-text" class="btns_text">
+							<p><span>连接会话</span></p>
+						</div>
+					</div>
+					<div id="delete-btn" class="btns" style="top: 140px; background-color: #455a64;">
+						<div id="delete-btn-text" class="btns_text">
+							<p><span>删除会话</span></p>
+						</div>
+					</div>
+				</div>
+				<!--搜索框-->
+				<div id="search" class="search-textbox-div">
+					<div id="manage-session-message-search" class="search-img" style="left: 150px; bottom: 10px;">
+						<img id="manage-session-message-search-img" src="img/u68.svg" class="search-img" />
+					</div>
+					<div id="manage-session-search-textbox-border" class="search-textbox-border"></div>
+					<input type="text" id="manage-session-search-textbox" value="请输入想要查看的会话序号" class="search-textbox" onclick="this.value=''" />
+
+				</div>
+
+				<!--用户会话数量div结束-->
+			</div>
+
+			<!--会话概况div开始-->
+			<div id="survey">
+				<!--图标及标题-->
+				<div id="survey-icon-title">
+					<img class="img-icon" src="img/u39.svg" />
+					<p class="title-text">会话概况</p>
+				</div>
+
+				<!--扇形图-->
+				<div id="sxt">
+
+				</div>
+
+				<!--会话概况div结束-->
+			</div>
+
+			<!--会话管理div开始-->
+			<div id="manage">
+				<!--图标及标题-->
+
+				<!--左侧-->
+				<div id="manage-left" style="position: ;top: 0px;left: 70px;width: 650px;height: 350px;">
+					<!--创建会话-->
+					<div id="manage-session-open">
+						<div id="manage-session-open-left" class="input-title-div">
+							<p class="manage-text">创建会话</p>
+						</div>
+
+						<div id="manage-session-open-mid" class="input-textbox-div">
+
+							<div id="manage-session-open-textbox-border" class="input-textbox-border"></div>
+							<input type="text" id="manage-session-open-textbox" value="请输入会话序号" class="input-textbox" onclick="this.value=''" />
+
+						</div>
+						<div id="manage-session-open-right" class="input-btn-div">
+							<div id="manage-session-open-btn" class="ensure" style="right: 40px;">
+								<div id="manage-session-open-btn_text" class="ensure_text" onclick="openbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+						<div id="line1"></div>
+					</div>
+					<!--会话密码-->
+					<div id="manage-session-close">
+						<div id="manage-session-close-left" class="input-title-div" style=" top: 0px;">
+							<p class="manage-text">会话密码</p>
+						</div>
+
+						<div id="manage-session-close-mid" class="input-textbox-div" style="top: 20px; height: 120px; ">
+							<div id="share-div" class="input-textbox-border" style="width: 140px; right: 120px; bottom: 70px;color: black;  ">
+								<input type="radio" name="radio-share" value="share" />
+								<label for="share">会话共享</label>
+							</div>
+							<div id="not-share-div" class="input-textbox-border" style="left: 170px;width: 130px; right: 160px; bottom: 70px; color: black;">
+								<input type="radio" name="radio-share" value="not-share" checked="checked" />
+								<label for="not-share">会话不共享</label>
+							</div>
+
+							<div id="random-pass-div" class="input-textbox-border" style="width: 140px; right: 120px; color: black; ">
+								<input type="radio" name="radio-pass" value="random" />
+								<label for="random-pass">随机生成</label>
+							</div>
+							<div id="appoint-pass-div" class="input-textbox-border" style="left: 170px;width: 130px; right: 160px;  color: black;">
+								<input type="radio" name="radio-pass" value="appoint" checked="checked" />
+								<label for="appoint-pass">指定密码</label>
+							</div>
+						</div>
+
+						<div id="manage-session-close-right" class="input-btn-div" style=" top: 55px; ">
+							<div id="manage-session-close-btn" class="ensure" style="right: 40px;">
+								<div id="manage-session-close-btn_text" class="ensure_text" onclick="closebtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+
+						<div id="line2"></div>
+					</div>
+					<!--查看密码-->
+					<div id="manage-session-create">
+						<div id="manage-session-create-left" class="input-title-div" style=" top: -50px;">
+							<p class="manage-text">查看密码</p>
+						</div>
+						<div id="manage-session-create-mid" class="input-textbox-div" style="top: -50px; height: 80px; ">
+							<div id="manage-session-create-textbox-border" class="input-textbox-border"></div>
+
+							<select id="select-box" type="text" class="input-textbox" style="left: 0px ;bottom: 30px;">
+
+							</select>
+							<div id="operate-pass-div" class="input-textbox-border" style="width: 140px; right: 120px;top: 50px; color: black; ">
+								<input type="radio" name="radio-cat" value="operate" />
+								<label for="operate-pass">操作密码</label>
+							</div>
+							<div id="share-pass-div" class="input-textbox-border" style="left: 180px;width: 130px; right: 160px; top: 50px; color: black;">
+								<input type="radio" name="radio-cat" value="share" checked="checked" />
+								<label for="share-pass">共享密码</label>
+							</div>
+
+						</div>
+						<div id="manage-session-create-right" class="input-btn-div" style=" top: -10px;">
+							<div id="manage-session-create-btn" class="ensure" style="right: 40px;">
+								<div id="manage-session-create-btn_text" class="ensure_text" onclick="createbtn()">
+									<p><span>确定</span></p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!--会话管理div结束-->
+			</div>
+
+			<!--主体div结束-->
+		</div>
+	</body>
+	<script type="text/javascript" src="js/myJS/cligetdata-page.js"></script>
+	<script type="text/javascript" src="js/myJS/sxt.js"></script>
+
+</html>

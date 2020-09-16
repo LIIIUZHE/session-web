@@ -1,0 +1,38 @@
+[
+{
+"name": "会话1",
+"sharestatus": "共享",
+"runstatus": "关闭",
+"runtime": "1:12:12"
+},
+{
+"name": "会话2",
+"sharestatus": "非共享",
+"runstatus": "开启",
+"runtime": "1:12:12"
+},
+{
+"name": "会话3",
+"sharestatus": "共享",
+"runstatus": "关闭",
+"runtime": "1:12:12"
+},
+{
+"name": "会话4",
+"sharestatus": "非共享",
+"runstatus": "开启",
+"runtime": "1:12:12"
+},
+{
+"name": "会话5",
+"sharestatus": "共享",
+"runstatus": "关闭",
+"runtime": "1:12:12"
+},
+{
+"name": "会话6",
+"sharestatus": "非共享",
+"runstatus": "开启",
+"runtime": "1:12:12"
+}
+]

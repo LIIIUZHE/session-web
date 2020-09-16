@@ -1,0 +1,323 @@
+#main {
+	margin: auto;
+	position: absolute;
+	width: 1440px;
+	height: 900px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #F2F2F2;
+	border: 1px solid rgb(127, 127, 127);
+	border-radius: 5px;
+}
+
+#number {
+	position: absolute;
+	width: 720px;
+	height: 450px;
+}
+
+#survey {
+	position: absolute;
+	left: 720px;
+	width: 720px;
+	height: 450px;
+}
+
+#down {
+	position: absolute;
+	top: 450px;
+	width: 1440px;
+	height: 450px;
+}
+
+#number-icon-title {
+	position: absolute;
+	left: 70px;
+	top: 40px;
+	width: 200px;
+	height: 50px;
+}
+
+#survey-icon-title {
+	position: absolute;
+	left: 50px;
+	top: 40px;
+	width: 200px;
+	height: 50px;
+}
+
+#manage-icon-title {
+	padding-left: 70px;
+	padding-top: 10px;
+}
+
+#manage-icon {
+	width: 32px;
+	height: 32px;
+	margin-bottom: -6px;
+}
+
+#manage-title {
+	padding-left: 8px;
+	font-family: '思源黑体 CN ';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 24px;
+}
+
+.img-icon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 32px;
+	height: 32px;
+}
+
+.title-text {
+	position: absolute;
+	left: 48px;
+	top: -24px;
+	font-family: '思源黑体 CN ';
+	font-weight: 700;
+	font-style: normal;
+	font-size: 24px;
+}
+
+#zzt {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 600px;
+	height: 400px;
+}
+
+#page {
+	position: absolute;
+	top: 110px;
+	left: 50px;
+	width: 450px;
+	height: 350px;
+}
+
+#current {
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	width: 300px;
+	height: 30px;
+}
+
+#current-text {
+	position: absolute;
+	top: -10px;
+	width: 300px;
+	height: 30px;
+	font-family: '思源黑体 CN';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+}
+
+#btn-5 {
+	position: absolute;
+	top: 110px;
+	left: 500px;
+	width: 150px;
+	height: 250px;
+}
+
+#manage-left {
+	width: 717px;
+	height: 408px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#manage-right {
+	width: 717px;
+	height: 408px;
+	display: inline-block;
+}
+
+#manage-session-open {
+	padding-top: 20px;
+	padding-left: 108px;
+}
+
+#manage-session-close {
+	padding-left: 108px;
+}
+
+#manage-session-create {
+	padding-left: 108px;
+}
+
+#manage-session-setpassword {
+	padding-left: 108px;
+}
+
+#manage-session-connect {
+	padding-left: 108px;
+}
+
+#manage-session-delete {
+	padding-left: 108px;
+}
+
+#manage-session-catpassword {
+	padding-top: 20px;
+	padding-left: 50px;
+}
+
+#manage-session-list {
+	padding-left: 50px;
+}
+
+#manage-session-message {
+	padding-left: 50px;
+}
+
+#manage-session-setpassword-select {
+	padding-left: 108px;
+}
+
+.input-title-div {
+	width: 80px;
+	display: inline-block;
+}
+
+.input-textbox-div {
+	padding-left: 15px;
+	width: 320px;
+	display: inline-block;
+}
+
+.input-btn-div {
+	width: 80px;
+	padding-left: 5px;
+	display: inline-block;
+}
+
+.input-textbox {
+	width: 270px;
+	height: 28px;
+	background: inherit;
+	background-color: rgba(255, 255, 255, 0);
+	box-sizing: border-box;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(121, 121, 121, 1);
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: '思源黑体 CN';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	color: #7F7F7F;
+}
+
+.manage-text {
+	text-align: center;
+	align-self: center;
+	font-family: '思源黑体 CN ';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.ensure {
+	border-width: 0px;
+	width: 80px;
+	height: 28px;
+	background: inherit;
+	background-color: rgba(22, 155, 213, 1);
+	border: none;
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: flex;
+	font-family: '思源黑体 CN';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	color: white;
+}
+
+.ensure_text {
+	align-self: center;
+	text-align: center;
+	padding: 2px 2px 2px 2px;
+	box-sizing: border-box;
+	width: 100%;
+	border-width: 0px;
+	word-wrap: break-word;
+	text-transform: none;
+}
+
+.addipt {
+	padding-left: 15px;
+	width: 16px;
+	height: 16px;
+}
+
+.search-img {
+	border-width: 0px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 20px;
+	width: 16px;
+	height: 16px;
+	display: flex;
+}
+
+.btns {
+	border-width: 0px;
+	position: absolute;
+	left: 60px;
+	width: 90px;
+	height: 28px;
+	background: inherit;
+	background-color: #4caf50;
+	border: none;
+	border-radius: 5px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	font-family: '思源黑体 CN';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	display: flex;
+	color: white;
+	padding: 2px 2px 2px 2px;
+	box-sizing: border-box;
+}
+
+.btns_text {
+	position: absolute;
+	align-self: center;
+	text-align: center;
+	padding: 2px 2px 2px 2px;
+	box-sizing: border-box;
+	left: -1px;
+	width: 100%;
+	border-width: 0px;
+	word-wrap: break-word;
+	text-transform: none;
+}
+
+.radiotext {
+	font-family: '思源黑体 CN';
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	color: #7F7F7F;
+}
